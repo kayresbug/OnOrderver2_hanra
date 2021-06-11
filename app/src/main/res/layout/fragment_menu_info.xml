@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rectangle_menu_info"
+    android:orientation="horizontal"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/menu_info_image"
+            android:src="@drawable/sh_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginLeft="30dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/info_top"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/btn_close_info"
+                android:layout_gravity="right"
+                android:src="@drawable/icon_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginBottom="15dp"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/bullet_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:layout_marginLeft="6dp"
+                    android:src="@drawable/bullet_hit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/menu_info_name"
+                    android:textSize="30sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/nanum_square_round_b"
+                    android:text="오븐구이 치킨"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/menu_info_detail"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000"
+                    android:text="날개에 스며든 양념과 부드러운 살은 그냥 사랑이지.."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/info_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/menuinfofragment_layout_option1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/menuinfofragment_layout_option1_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/menuinfofragment_text_count1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center_vertical"
+                        android:text="01"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/nanum_square_round_b"
+                        android:textColor="#000"
+                        android:text="맵기를 선택해주세요."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuinfofragment_layout_radio1"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:checked="true"
+                            android:id="@+id/radio1"
+                            android:textSize="12sp"
+                            android:text="1단계"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <RadioButton
+                            android:id="@+id/radio2"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="2단계"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <RadioButton
+                            android:id="@+id/radio3"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="12sp"
+                            android:text="3단계"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menuinfofragment_layout_option2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/menuinfofragment_text_count2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center_vertical"
+                        android:text="02"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/nanum_square_round_b"
+                        android:textColor="#000"
+                        android:text="수량을 선택해주세요."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/btn_menu_minus"
+                        android:src="@drawable/icon_minus"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"/>
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/menu_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="1"
+                        android:textColor="#2a2a2a"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/btn_menu_plus"
+                        android:src="@drawable/icon_plus"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menuinfofragment_layout_option3"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/menuinfofragment_text_count3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center_vertical"
+                        android:text="03"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/nanum_square_round_b"
+                        android:textColor="#000"
+                        android:text="수량을 선택해주세요."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:text="물  냉  면 : "
+                            android:fontFamily="@font/nanum_square_round_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                android:id="@+id/btn_menu_option_minus"
+                                android:src="@drawable/icon_minus"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"/>
+
+                            <TextView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:gravity="center"
+                                android:id="@+id/menu_option_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="0"
+                                android:textColor="#2a2a2a"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:id="@+id/btn_menu_option_plus"
+                                android:src="@drawable/icon_plus"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:text="비빔냉면 : "
+                            android:fontFamily="@font/nanum_square_round_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:id="@+id/btn_menu_option2_minus"
+                                android:src="@drawable/icon_minus"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"/>
+
+                            <TextView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:id="@+id/menu_option2_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="0"
+                                android:textColor="#2a2a2a"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:id="@+id/btn_menu_option2_plus"
+                                android:src="@drawable/icon_plus"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:text="김치찌개 : "
+                            android:fontFamily="@font/nanum_square_round_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                android:id="@+id/btn_menu_option3_minus"
+                                android:src="@drawable/icon_minus"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"/>
+
+                            <TextView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:gravity="center"
+                                android:id="@+id/menu_option3_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="0"
+                                android:textColor="#2a2a2a"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:id="@+id/btn_menu_option3_plus"
+                                android:src="@drawable/icon_plus"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:text="된장찌개 : "
+                            android:fontFamily="@font/nanum_square_round_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                android:id="@+id/btn_menu_option4_minus"
+                                android:src="@drawable/icon_minus"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"/>
+
+                            <TextView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:gravity="center"
+                                android:id="@+id/menu_option4_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="0"
+                                android:textColor="#2a2a2a"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                android:id="@+id/btn_menu_option4_plus"
+                                android:src="@drawable/icon_plus"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/nanum_square_round_b"
+                    android:text="총 "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/menu_info_price"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="18,000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:fontFamily="@font/nanum_square_round_b"
+                    android:text="원"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btn_add_cart"
+                    android:paddingRight="40dp"
+                    android:paddingLeft="40dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/nanum_square_round_b"
+                    android:textColor="#fff"
+                    android:text="장바구니"
+                    android:background="@drawable/rectangle_btn_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

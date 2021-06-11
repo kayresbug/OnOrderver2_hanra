@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:paddingTop="20dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="430dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="150dp"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:orientation="vertical"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" >
+
+                <TextView
+                    android:id="@+id/btn_timer_reset"
+                    android:fontFamily="@font/nanum_square_round_b"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:text="TABLE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/table_no"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="#ffbb00"
+                        android:textSize="45sp"
+                        android:text="A-1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:visibility="invisible"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/table_timer"
+                            android:textSize="15sp"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:text="02:00"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rectangle_yellow_card"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:text="RESET"
+                            android:textColor="#000"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:overScrollMode="never"
+                android:id="@+id/category_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:background="@drawable/rectangle_menu_background"
+            android:id="@+id/fragment_menu"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/btn_service"
+                android:gravity="center_vertical"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:paddingRight="26dp"
+                android:paddingLeft="26dp"
+                android:background="@drawable/rectangle_yellow_call"
+                android:orientation="horizontal"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginRight="3dp"
+                    android:src="@drawable/icon_bell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textColor="#000000"
+                    android:fontFamily="@font/nanum_square_round_b"
+                    android:textSize="19sp"
+                    android:text="직원호출"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:paddingRight="26dp"
+                android:paddingLeft="26dp"
+                android:background="@drawable/rectangle_yellow_call"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginRight="2dp"
+                    android:src="@drawable/icon_drive"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    android:textColor="#000000"
+                    android:fontFamily="@font/nanum_square_round_b"
+                    android:textSize="21sp"
+                    android:text="대리운전"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:paddingRight="22dp"
+            android:paddingLeft="22dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+
+            android:background="@drawable/rectangle_white_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/order_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="MissingConstraints">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:gravity="right"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:id="@+id/btn_payment"
+                    android:paddingLeft="17dp"
+                    android:paddingRight="17dp"
+                    android:background="@drawable/circle_black_cart"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/order_total_price"
+                        android:gravity="center_vertical"
+                        android:textColor="#fff"
+                        android:text="0원"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:textColor="#fff"
+                        android:text=" 결제하기"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/icon_basket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="20dp"
+        android:background="@drawable/rectangle_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:fontFamily="@font/nanum_square_round_b"
+                android:text="주문하기"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:text="결제 방법을 선택하고 결제를 진행해주세요."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/btn_pay_card"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="35dp"
+                android:paddingBottom="30dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/square_popup_item"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/icon_card_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textSize="24sp"
+                    android:fontFamily="@font/nanum_square_round_r"
+                    android:textColor="#ffbb00"
+                    android:layout_marginTop="32dp"
+                    android:text="카드결제"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/btn_pay_cash"
+                android:paddingTop="35dp"
+                android:paddingBottom="30dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/square_popup_item"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/icon_cash_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textSize="24sp"
+                    android:fontFamily="@font/nanum_square_round_r"
+                    android:textColor="#ffbb00"
+                    android:layout_marginTop="32dp"
+                    android:text="현금결제"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:id="@+id/btn_re_order"
+                android:paddingTop="35dp"
+                android:paddingBottom="30dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/square_popup_item"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/icon_re_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textSize="24sp"
+                    android:fontFamily="@font/nanum_square_round_r"
+                    android:textColor="#ffbb00"
+                    android:layout_marginTop="32dp"
+                    android:text="다시주문"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
